@@ -5,14 +5,12 @@ images[0] = "url('images/TE2.jpg')";
 images[1] = "url('images/TE7.jpg')";
 images[2] = "url('images/TE6.jpg')";
 
-// Thumbnail image controls
 const currentSlide = (n) => {
   i = n;
   clearTimeout(timeout);
   showSlides(true);
 };
 
-// Create dots
 const createDots = () => {
   images.forEach((item, index) => {
     var newDot = document.createElement("div");

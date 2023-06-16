@@ -36,10 +36,16 @@
   }
 
   #botao{
-    color: #eee4f0;
-    background-color: #950BB9;
+    color: #ffffff;
+    background-color: #340763;
     border-radius: 50px;
     width: 200px;
-
   }
+
+  #botao:hover {
+    background-color: #fff;
+    border: 1.5px solid #340763;
+    color: #340763;
+  }
+  
   

@@ -25,20 +25,15 @@ function incluirAgendamento($idUsuario, $enderecoEmbarque, $enderecoDesembarque,
 {
     global $conn;
 
-    // Prepara a consulta SQL com placeholders
     $sql = "INSERT INTO viagens (idUsuario, enderecoEmbarque, enderecoDesembarque, horarioLocal, horarioRetorno, dataviagem,causa) VALUES (?, ?, ?, ?, ?, ?,?)";
     $stmt = $conn->prepare($sql);
 
-    // Vincula os valores aos placeholders
     $stmt->bind_param("sssssss", $idUsuario, $enderecoEmbarque, $enderecoDesembarque, $horaLocal, $horaRetorno, $dataviagem,$causa);
 
-    // Executa a consulta
     $stmt->execute();
 
-    // Descobrir o id do agendamento
     $idAgendamento = $stmt->insert_id;
 
-    // Fecha a conexão
     $stmt->close();
     $conn->close();
 
@@ -47,7 +42,6 @@ function incluirAgendamento($idUsuario, $enderecoEmbarque, $enderecoDesembarque,
 
 $retorno = incluirAgendamento($idUsuario, $enderecoEmbarque, $enderecoDesembarque, $horaLocal, $horaRetorno, $dataviagem, $causa );
 
-// Exibir notificação pop-up com o ID do agendamento e aguardar a confirmação do usuário
 echo "<script>
     var idAgendamento = " . $retorno . ";
     var confirmation = window.confirm('Agendamento incluído! ID: ' + idAgendamento + '. ESSE ID É EXCLUSIVO DESTA VIAGEM E SÓ SERÁ POSSÍVEL CONSULTAR OU EXCLUIR A VIAGEM ATRAVÉS DELE: ID: ' + idAgendamento + '.');

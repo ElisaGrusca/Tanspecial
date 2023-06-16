@@ -25,7 +25,6 @@ body {
   border: 1.5px solid #340763;
   transition: 0.5s;
 }
-
 .btn2-second2:hover {
   background-color: #340763;
   border: 1.5px solid #ffffff;
@@ -201,18 +200,18 @@ body {
 
 .button {
   color: #fffffc;
-  background-color: #950BB9;
+  background-color: #340763;
   border-radius: 50px;
   border: 1.7px solid #fffffc;
   display: flex;
   align-items: center;
   width: 225px;
   height: 45px;
-  transition: background-color 0.3s, color 0.3s; /* Adicionando transição suave */
+  transition: background-color 0.3s, color 0.3s; 
 }
 
 .button:hover {
-  background-color: #f5f102; /* Alterando a cor de fundo ao passar o mouse */
-  color: #950BB9; /* Alterando a cor do texto ao passar o mouse */
+  background-color: #f5f102; 
+  color: #950BB9;
 }
 

@@ -14,7 +14,7 @@ if (isset($_SESSION['logado']) && $_SESSION['logado'] === true) {
 
 <head>
     <meta charset="UTF-8">
-    <title>TranspecialAdmin</title>
+    <title>Transpecial</title>
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/agendar.css">
     <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
@@ -46,7 +46,7 @@ if (isset($_SESSION['logado']) && $_SESSION['logado'] === true) {
                         </div>
                         <div>
                             <label for="txtCpf">CPF</label>
-                            <p>Sem pontuação!</p>
+                            <p>(Sem pontuação)</p>
                             <input type="text" name='cpf' destino="cpf" id="txtCpf" required>
                         </div>
                         <div>
@@ -55,7 +55,7 @@ if (isset($_SESSION['logado']) && $_SESSION['logado'] === true) {
                         </div>
                         <div class="espaco">
                             <label for="txtLogin">Login</label>
-                            <p>Repita o cpf do usuário!</p>
+                            <p>(CPF do usuário)</p>
                             <input type="text" name='login' destino="login" id="txtLogin" required>
                         </div>
                         <div>
@@ -64,16 +64,17 @@ if (isset($_SESSION['logado']) && $_SESSION['logado'] === true) {
                         </div>
                         <div class="espaco">
                             <label for="txtAcompanhante">Acompanhante</label>
+                            <p>(Sim ou Não)</p>
                             <input type="text" name='acompanhante' destino="acompanhante" id="txtAcompanhante" required>
                         </div>
                         <div>
                             <label for="txtCadeirante">Cadeirante</label>
-                            <p>SIM ou NÃO</p>
+                            <p>(Sim ou Não)</p>
                             <input type="text" name='cadeirante' destino="cadeirante" id="txtCadeirante" required>
                         </div>
                         <div class="espaco">
-                            <label for="txtEndereçoRes">Endereço Residencial - preencha como o exemplo</label>
-                            <p>Exemplo: 'Rua São Bento, 190, Centro, Sorocaba - SP'</p>
+                            <label for="txtEndereçoRes">Endereço Residencial</label>
+                            <p>(Rua, número, Bairro, Cidade - Estado)</p>
                             <input type="text" name='enderecoRes' destino="endereçoRes" id="txtEndereçoRes" required>
                         </div>
                     </div>
@@ -85,9 +86,8 @@ if (isset($_SESSION['logado']) && $_SESSION['logado'] === true) {
                     </div>
                 </fieldset>
                 <div class="campo">
-                    <!-- Botão para enviar o formulário -->
                     <div class="campo div div-direita">
-                        <button class="btn btn-second" type="submit">AGENDAR</button>
+                        <button class="btn btn-second" type="submit">CADASTRAR</button>
                     </div>
                 </div>
             </form>
